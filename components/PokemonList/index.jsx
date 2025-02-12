@@ -8,13 +8,13 @@ export const PokemonList = ({ pokemon }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {pokemon.map((p) => (
           <Link key={p.name} href={`/pokemon/${p.name}`}>
-            <div className="text-center bg-white card rounded-xl duration-500 hover:scale-105">
+            <div className="text-center bg-white card rounded-xl duration-500 hover:scale-105 overflow-hidden">
               <img
                 src={p.image}
                 alt={p.name}
                 className="h-80 w-full object-contain rounded-t-xl hover:animate-zoomPulse"
               />
-              <div className="px-4 py-3">
+              <div className="bg-gray-200 px-4 py-3">
                 <p className="text-lg font-bold text-black truncate block capitalize">
                   {p.name}
                 </p>
